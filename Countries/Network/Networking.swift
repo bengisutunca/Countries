@@ -25,4 +25,15 @@ class Networking {
             }
         }
     }
+    
+    func countryDetails(code: String, completion: @escaping (Result<CountryDetailModel, APIError>) -> Void) {
+        apiService.loadData(from: Endpoint.getCountryDetails(code: code)) { (result: Result<CountryDetailModel, APIError>) in
+            switch result {
+            case .success(let data):
+                completion(.success(data))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

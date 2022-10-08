@@ -36,4 +36,8 @@ extension Endpoint {
     static func getCountries(limit: String) -> URL {
         Endpoint(path: "/geo/countries/").url
     }
+    
+    static func getCountryDetails(code: String) -> URL {
+        Endpoint(path: "/geo/countries/\(code)").url
+    }
 }
