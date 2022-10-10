@@ -18,4 +18,3 @@ Countries App is an iOS App created by using GEODB Cities Api which users can se
 - Users can add a country to the saved list.
 - Users can remove a country from the saved list.
 
-
