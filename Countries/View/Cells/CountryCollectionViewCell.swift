@@ -37,7 +37,7 @@ final class CountryCollectionViewCell: UICollectionViewCell {
             
             GlobalVariables.savedCountriesCodeList.remove(at: deleteID)
             GlobalVariables.savedCountriesNameList.remove(at: deleteName)
-            
+
             UserDefaults.standard.setValue(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
             btnAddFavorited?.setImage(UIImage(systemName: GlobalVariables.unsaved), for: .normal)
             return
@@ -45,7 +45,7 @@ final class CountryCollectionViewCell: UICollectionViewCell {
         
         GlobalVariables.savedCountriesCodeList.append(self.country?.code ?? "")
         GlobalVariables.savedCountriesNameList.append(self.country?.name ?? "")
-        
+
         UserDefaults.standard.set(GlobalVariables.savedCountriesNameList, forKey: UserDefaultsKey.countreyNamesKey.rawValue)
         UserDefaults.standard.set(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
         btnAddFavorited?.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)

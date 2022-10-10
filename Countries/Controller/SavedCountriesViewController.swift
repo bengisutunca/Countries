@@ -20,10 +20,14 @@ final class SavedCountriesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async {
-            self.savedCountryNameList = GlobalVariables.savedCountriesNameList
-            self.savedCountryCodeList = GlobalVariables.savedCountriesCodeList
-            self.savedCountriesCollectionView.reloadData()
+            self.updateArraysAndUI()
         }
+    }
+    
+    private func updateArraysAndUI(){
+        self.savedCountryNameList = GlobalVariables.savedCountriesNameList
+        self.savedCountryCodeList = GlobalVariables.savedCountriesCodeList
+        self.savedCountriesCollectionView.reloadData()
     }
 }
 
@@ -35,6 +39,31 @@ extension SavedCountriesViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SavedCountriesCollectionViewCell", for: indexPath) as! SavedCountriesCollectionViewCell
         cell.lblCountryName?.text = savedCountryNameList[indexPath.row]
+        cell.deleteCell = { [weak self] in
+            if (self?.savedCountryCodeList.count == 1) {
+                GlobalVariables.savedCountriesNameList.remove(at: indexPath.item)
+                GlobalVariables.savedCountriesCodeList.remove(at: indexPath.item)
+                DispatchQueue.main.async {
+                    self?.updateArraysAndUI()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self?.savedCountriesCollectionView.reloadData()
+                    GlobalVariables.savedCountriesNameList.remove(at: indexPath.item)
+                    GlobalVariables.savedCountriesCodeList.remove(at: indexPath.item)
+                    DispatchQueue.main.async {
+                        self?.updateArraysAndUI()
+                    }
+                }
+                
+            }
+            do {
+                // MARK: For deleting cells in UICollectionView
+                self?.savedCountriesCollectionView.performBatchUpdates({
+                    self?.savedCountriesCollectionView.deleteItems(at: [indexPath])
+                }, completion: nil)
+            }
+        }
         return cell
     }
     
@@ -43,7 +72,7 @@ extension SavedCountriesViewController: UICollectionViewDataSource, UICollection
             self.navigationController?.pushViewController(countryDetailsVC, animated: true)
             countryDetailsVC.countryCode = savedCountryCodeList[indexPath.row]
             countryDetailsVC.countryName = savedCountryNameList[indexPath.row]
-
+            
         }
     }
 }
@@ -55,4 +84,3 @@ extension SavedCountriesViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width * 0.9, height: height * 0.1)
     }
 }
-

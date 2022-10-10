@@ -8,9 +8,8 @@ Countries App is an iOS App created by using GEODB Cities Api which users can se
 - iOS 15.4 Deployment Target
 
 ## Preview
-<div style="width: 60%; height: 60%">
 ![ScreenShot0](https://github.com/bengisutunca/Countries/blob/main/Screenshots/gif.gif?raw=true)
-</div> 
+
 ## Screenshots
 ### HomePage
 ![ScreenShot1](https://github.com/bengisutunca/Countries/blob/main/Screenshots/ScreenShot1.png?raw=true)

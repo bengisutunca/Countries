@@ -12,6 +12,8 @@ final class SavedCountriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblCountryName: UILabel!
     @IBOutlet private weak var btnFavorited: UIButton!
     
+    var deleteCell: (() -> Void)?
+    
     override func awakeFromNib() {
         makeRoundedCell()
         super.awakeFromNib()
@@ -31,6 +33,7 @@ final class SavedCountriesCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func savedButtonTapped(_ sender: UIButton) {
+        deleteCell?()
     }
     
     override func prepareForReuse() {
