@@ -25,14 +25,12 @@ extension Endpoint {
         guard let url = components.url else {
             preconditionFailure(
                 "Invalid URL components: \(components)"
-            )
-        }
+            )}
         return url
     }
 }
 
 extension Endpoint {
-    
     static func getCountries(limit: String) -> URL {
         Endpoint(path: "/geo/countries/").url
     }

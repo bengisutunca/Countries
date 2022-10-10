@@ -14,10 +14,9 @@ struct CountryModel: Decodable {
 struct Country: Codable {
     let code: String?
     let name: String?
-    let wikiDataID: String
+    let wikiDataId: String?
     
     enum CodingKeys: String, CodingKey {
-        case code, name
-        case wikiDataID = "wikiDataId"
+        case code, name, wikiDataId
     }
 }
