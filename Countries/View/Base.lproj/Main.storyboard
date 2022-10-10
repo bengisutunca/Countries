@@ -67,7 +67,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="btnFavorited" destination="8gB-Yg-dCq" id="T8c-FQ-HXV"/>
+                                            <outlet property="btnSave" destination="8gB-Yg-dCq" id="T8c-FQ-HXV"/>
                                             <outlet property="lblCountryName" destination="O2a-2f-9NL" id="PAQ-DU-CPE"/>
                                         </connections>
                                     </collectionViewCell>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="2295.6521739130435" y="-335.49107142857139"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Detail Card View Controller-->
         <scene sceneID="oC2-3V-Gb1">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="4b6-p1-OZ0" customClass="DetailsViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="4b6-p1-OZ0" customClass="DetailCardViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fIF-Bg-ZEP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

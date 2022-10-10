@@ -9,5 +9,5 @@ import Foundation
 
 enum UserDefaultsKey: String {
     case countryCodesKey
-    case countreyNamesKey
+    case countryNamesKey
 }

@@ -10,7 +10,7 @@ import UIKit
 final class SavedCountriesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lblCountryName: UILabel!
-    @IBOutlet private weak var btnFavorited: UIButton!
+    @IBOutlet private weak var btnSave: UIButton!
     
     var deleteCell: (() -> Void)?
     

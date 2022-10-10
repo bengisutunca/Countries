@@ -62,7 +62,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let countryDetailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+        if let countryDetailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailCardViewController {
             self.navigationController?.pushViewController(countryDetailsVC, animated: true)
             countryDetailsVC.countryCode = countries[indexPath.row].code
             countryDetailsVC.countryName = countries[indexPath.row].name

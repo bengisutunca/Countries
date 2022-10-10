@@ -1,5 +1,5 @@
 //
-//  DetailsViewController.swift
+//  DetailCardViewController.swift
 //  Countries
 //
 //  Created by Bengi Tunca on 8.10.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DetailsViewController: UIViewController {
+final class DetailCardViewController: UIViewController {
     
     @IBOutlet private weak var imgCountryFlag: UIImageView!
     @IBOutlet private weak var lblCountryCode: UILabel!
@@ -60,25 +60,11 @@ final class DetailsViewController: UIViewController {
     
     @objc func saveButtonPressed() {
         if(GlobalVariables.savedCountriesCodeList.contains(self.countryCode ?? "")){
-            let deleteID = GlobalVariables.savedCountriesCodeList.firstIndex(where: {$0 == countryCode})!
-            let deleteName = GlobalVariables.savedCountriesNameList.firstIndex(where: {$0 == countryName})!
-            
-            GlobalVariables.savedCountriesCodeList.remove(at: deleteID)
-            GlobalVariables.savedCountriesNameList.remove(at: deleteName)
-            
-            UserDefaults.standard.setValue(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
-            UserDefaults.standard.setValue(GlobalVariables.savedCountriesNameList, forKey: UserDefaultsKey.countreyNamesKey.rawValue)
-            
+            UserDefaultsManager().deleteUserDefaultsItem(countryCode: countryCode ?? "", countryName: countryName ?? "")
             saveButton?.image = UIImage(systemName: GlobalVariables.unsaved)
             return
         }
-        
-        GlobalVariables.savedCountriesCodeList.append(self.countryCode ?? "")
-        GlobalVariables.savedCountriesNameList.append(self.countryName ?? "")
-        
-        UserDefaults.standard.set(GlobalVariables.savedCountriesNameList, forKey: UserDefaultsKey.countreyNamesKey.rawValue)
-        UserDefaults.standard.set(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
-        
+        UserDefaultsManager().addItemToUserDefaults(countryCode: self.countryCode ?? "", countryName: self.countryName ?? "")
         saveButton?.image = UIImage(systemName: GlobalVariables.saved)
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18383D7428F4518F006C0F3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18383D7328F4518F006C0F3D /* TabBarViewController.swift */; };
+		18383D7D28F4CF04006C0F3D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18383D7C28F4CF04006C0F3D /* UserDefaultsManager.swift */; };
 		185502D028F19CEF00790D6D /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 185502CF28F19CEF00790D6D /* SVGKit */; };
 		185502D228F1D2D000790D6D /* SavedCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185502D128F1D2D000790D6D /* SavedCountriesViewController.swift */; };
 		185502D428F1F64100790D6D /* SavedCountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185502D328F1F64100790D6D /* SavedCountriesCollectionViewCell.swift */; };
@@ -25,7 +26,7 @@
 		18FADC8B28F08A74006FD0AB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC8A28F08A74006FD0AB /* Country.swift */; };
 		18FADC8E28F09779006FD0AB /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC8D28F09779006FD0AB /* CountryCollectionViewCell.swift */; };
 		18FADC9128F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC9028F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift */; };
-		18FADC9328F0D955006FD0AB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC9228F0D955006FD0AB /* DetailsViewController.swift */; };
+		18FADC9328F0D955006FD0AB /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC9228F0D955006FD0AB /* DetailCardViewController.swift */; };
 		18FADC9528F0E1DB006FD0AB /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC9428F0E1DB006FD0AB /* CountryDetail.swift */; };
 		18FADC9728F182FA006FD0AB /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FADC9628F182F9006FD0AB /* UIImageView+URL.swift */; };
 		18FADC9D28F185A8006FD0AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 18FADC9C28F185A8006FD0AB /* Kingfisher */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		18383D7328F4518F006C0F3D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		18383D7C28F4CF04006C0F3D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		185502D128F1D2D000790D6D /* SavedCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCountriesViewController.swift; sourceTree = "<group>"; };
 		185502D328F1F64100790D6D /* SavedCountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCountriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		185502D628F1F9EC00790D6D /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		18FADC8A28F08A74006FD0AB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		18FADC8D28F09779006FD0AB /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
 		18FADC9028F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Corners.swift"; sourceTree = "<group>"; };
-		18FADC9228F0D955006FD0AB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		18FADC9228F0D955006FD0AB /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
 		18FADC9428F0E1DB006FD0AB /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 		18FADC9628F182F9006FD0AB /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,13 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		185502D528F1F9D300790D6D /* GlobalVariables */ = {
+		18383D7B28F4CEF1006C0F3D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18383D7C28F4CF04006C0F3D /* UserDefaultsManager.swift */,
 				185502D628F1F9EC00790D6D /* UserDefaultsKey.swift */,
 				185502D828F1F9FB00790D6D /* GlobalVariables.swift */,
 			);
-			path = GlobalVariables;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		18D05FDB28F065AA00414E8B = {
@@ -97,14 +100,15 @@
 		18D05FE628F065AA00414E8B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
-				185502D528F1F9D300790D6D /* GlobalVariables */,
+				18383D7B28F4CEF1006C0F3D /* Helpers */,
 				18FADC8F28F0D304006FD0AB /* Extensions */,
-				18FADC8928F085E0006FD0AB /* App */,
-				18FADC8228F08340006FD0AB /* Network */,
-				18FADC8128F070D4006FD0AB /* Controller */,
-				18FADC8028F070CC006FD0AB /* View */,
+				18FADC8928F085E0006FD0AB /* Delegate */,
 				18FADC7F28F070B8006FD0AB /* Model */,
+				18FADC8028F070CC006FD0AB /* View */,
+				18FADC8128F070D4006FD0AB /* Controller */,
+				18FADC8228F08340006FD0AB /* Network */,
 				18D05FF528F065AB00414E8B /* Info.plist */,
+				18D05FF028F065AB00414E8B /* Assets.xcassets */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -133,7 +137,7 @@
 			children = (
 				18383D7328F4518F006C0F3D /* TabBarViewController.swift */,
 				18D05FEB28F065AA00414E8B /* HomeViewController.swift */,
-				18FADC9228F0D955006FD0AB /* DetailsViewController.swift */,
+				18FADC9228F0D955006FD0AB /* DetailCardViewController.swift */,
 				185502D128F1D2D000790D6D /* SavedCountriesViewController.swift */,
 			);
 			path = Controller;
@@ -149,14 +153,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		18FADC8928F085E0006FD0AB /* App */ = {
+		18FADC8928F085E0006FD0AB /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				18D05FF028F065AB00414E8B /* Assets.xcassets */,
 				18D05FE928F065AA00414E8B /* SceneDelegate.swift */,
 				18D05FE728F065AA00414E8B /* AppDelegate.swift */,
 			);
-			path = App;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		18FADC8C28F0973E006FD0AB /* Cells */ = {
@@ -270,9 +273,10 @@
 				185502D928F1F9FB00790D6D /* GlobalVariables.swift in Sources */,
 				18FADC8428F0836C006FD0AB /* Endpoint.swift in Sources */,
 				185502D228F1D2D000790D6D /* SavedCountriesViewController.swift in Sources */,
+				18383D7D28F4CF04006C0F3D /* UserDefaultsManager.swift in Sources */,
 				18D05FEA28F065AA00414E8B /* SceneDelegate.swift in Sources */,
 				18FADC9128F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift in Sources */,
-				18FADC9328F0D955006FD0AB /* DetailsViewController.swift in Sources */,
+				18FADC9328F0D955006FD0AB /* DetailCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

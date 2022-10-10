@@ -32,22 +32,10 @@ final class CountryCollectionViewCell: UICollectionViewCell {
     
     @IBAction func savedButtonTapped(_ sender: UIButton) {
         if(GlobalVariables.savedCountriesCodeList.contains(self.country?.code ?? "")){
-            let deleteID = GlobalVariables.savedCountriesCodeList.firstIndex(where: {$0 == self.country?.code})!
-            let deleteName = GlobalVariables.savedCountriesNameList.firstIndex(where: {$0 == self.country?.name})!
-            
-            GlobalVariables.savedCountriesCodeList.remove(at: deleteID)
-            GlobalVariables.savedCountriesNameList.remove(at: deleteName)
-
-            UserDefaults.standard.setValue(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
-            btnAddFavorited?.setImage(UIImage(systemName: GlobalVariables.unsaved), for: .normal)
+            UserDefaultsManager().deleteUserDefaultsItem(countryCode: self.country?.code ?? "", countryName: self.country?.name ?? "")
             return
         }
-        
-        GlobalVariables.savedCountriesCodeList.append(self.country?.code ?? "")
-        GlobalVariables.savedCountriesNameList.append(self.country?.name ?? "")
-
-        UserDefaults.standard.set(GlobalVariables.savedCountriesNameList, forKey: UserDefaultsKey.countreyNamesKey.rawValue)
-        UserDefaults.standard.set(GlobalVariables.savedCountriesCodeList, forKey: UserDefaultsKey.countryCodesKey.rawValue)
+        UserDefaultsManager().addItemToUserDefaults(countryCode: self.country?.code ?? "", countryName: self.country?.name ?? "")
         btnAddFavorited?.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)
     }
     

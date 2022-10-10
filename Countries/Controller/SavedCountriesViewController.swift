@@ -40,25 +40,13 @@ extension SavedCountriesViewController: UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SavedCountriesCollectionViewCell", for: indexPath) as! SavedCountriesCollectionViewCell
         cell.lblCountryName?.text = savedCountryNameList[indexPath.row]
         cell.deleteCell = { [weak self] in
-            if (self?.savedCountryCodeList.count == 1) {
-                GlobalVariables.savedCountriesNameList.remove(at: indexPath.item)
-                GlobalVariables.savedCountriesCodeList.remove(at: indexPath.item)
-                DispatchQueue.main.async {
-                    self?.updateArraysAndUI()
-                }
-            } else {
+            // MARK: For deleting cells in UICollectionView
                 DispatchQueue.main.async {
                     self?.savedCountriesCollectionView.reloadData()
-                    GlobalVariables.savedCountriesNameList.remove(at: indexPath.item)
-                    GlobalVariables.savedCountriesCodeList.remove(at: indexPath.item)
-                    DispatchQueue.main.async {
-                        self?.updateArraysAndUI()
-                    }
+                    UserDefaultsManager().removeUserDefaultItemsAtIndexPath(indexPath: indexPath.item)
+                    self?.updateArraysAndUI()
                 }
-                
-            }
             do {
-                // MARK: For deleting cells in UICollectionView
                 self?.savedCountriesCollectionView.performBatchUpdates({
                     self?.savedCountriesCollectionView.deleteItems(at: [indexPath])
                 }, completion: nil)
@@ -68,7 +56,7 @@ extension SavedCountriesViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let countryDetailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+        if let countryDetailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailCardViewController {
             self.navigationController?.pushViewController(countryDetailsVC, animated: true)
             countryDetailsVC.countryCode = savedCountryCodeList[indexPath.row]
             countryDetailsVC.countryName = savedCountryNameList[indexPath.row]

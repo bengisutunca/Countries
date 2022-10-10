@@ -10,7 +10,7 @@ import UIKit
 struct GlobalVariables {
     // MARK: UserDefaults Arrays
     static var savedCountriesCodeList = UserDefaults.standard.array(forKey: UserDefaultsKey.countryCodesKey.rawValue) as? [String] ?? []
-    static var savedCountriesNameList = UserDefaults.standard.array(forKey: UserDefaultsKey.countreyNamesKey.rawValue) as? [String] ?? []
+    static var savedCountriesNameList = UserDefaults.standard.array(forKey: UserDefaultsKey.countryNamesKey.rawValue) as? [String] ?? []
     
     // MARK: Save Button Images file names
     static var saved = "star.fill"
