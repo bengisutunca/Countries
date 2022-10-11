@@ -15,16 +15,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="GlD-6A-g6U">
+                                <rect key="frame" x="62" y="298" width="290" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GlD-6A-g6U" secondAttribute="height" multiplier="282:301" id="aVq-GD-Url"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GlD-6A-g6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="254" id="IQM-Ax-dzT"/>
+                            <constraint firstItem="GlD-6A-g6U" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Whs-E6-ARw"/>
+                            <constraint firstItem="GlD-6A-g6U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sA6-ZP-Nfa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="launchscreen" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
