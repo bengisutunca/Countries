@@ -219,7 +219,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="btnAddFavorited" destination="Eiy-bs-LWO" id="chf-Vu-zhC"/>
+                                            <outlet property="btnSave" destination="Eiy-bs-LWO" id="chf-Vu-zhC"/>
                                             <outlet property="lblCountryName" destination="xbh-41-S9S" id="3dg-Bd-GR6"/>
                                         </connections>
                                     </collectionViewCell>

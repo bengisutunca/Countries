@@ -10,7 +10,7 @@ import UIKit
 final class CountryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var lblCountryName: UILabel!
-    @IBOutlet weak var btnAddFavorited: UIButton!
+    @IBOutlet weak var btnSave: UIButton!
     
     override func awakeFromNib() {
         makeRoundedCell()
@@ -36,7 +36,7 @@ final class CountryCollectionViewCell: UICollectionViewCell {
             return
         }
         UserDefaultsManager().addItemToUserDefaults(countryCode: self.country?.code ?? "", countryName: self.country?.name ?? "")
-        btnAddFavorited?.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)
+        btnSave?.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)
     }
     
     override func prepareForReuse() {

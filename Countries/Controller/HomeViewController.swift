@@ -54,9 +54,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         countryCode = countries[indexPath.item].code
         countryName = countries[indexPath.item].name
         if (GlobalVariables.savedCountriesCodeList.firstIndex(where: {$0 == countryCode}) != nil) {
-            cell.btnAddFavorited.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)
+            cell.btnSave.setImage(UIImage(systemName: GlobalVariables.saved), for: .normal)
         } else {
-            cell.btnAddFavorited.setImage(UIImage(systemName: GlobalVariables.unsaved), for: .normal)
+            cell.btnSave.setImage(UIImage(systemName: GlobalVariables.unsaved), for: .normal)
         }
         return cell
     }
