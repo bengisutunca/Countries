@@ -84,7 +84,7 @@ final class DetailCardViewController: UIViewController {
         if countryDetails?.data?.wikiDataId != nil {
             UIApplication.shared.open((URL(string: "\(GlobalVariables.wiki+((countryDetails?.data?.wikiDataId)!))")!) as URL, options: [:], completionHandler: nil)
         } else {
-            
+            showAlert(alertText: GlobalVariables.noDataPlaceHolder, alertMessage: "")
         }
     }
 }

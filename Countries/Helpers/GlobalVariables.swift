@@ -25,4 +25,5 @@ struct GlobalVariables {
     static var tabBarItemName1 = "Home"
     static var tabBarItemName2 = "Saved"
     static var noDataPlaceHolder = "There is nothing to show."
+    static var alertButtonString = "OK"
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18383D7428F4518F006C0F3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18383D7328F4518F006C0F3D /* TabBarViewController.swift */; };
 		18383D7D28F4CF04006C0F3D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18383D7C28F4CF04006C0F3D /* UserDefaultsManager.swift */; };
+		18383D8128F593CC006C0F3D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18383D8028F593CC006C0F3D /* UIViewController+Alert.swift */; };
 		185502D028F19CEF00790D6D /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 185502CF28F19CEF00790D6D /* SVGKit */; };
 		185502D228F1D2D000790D6D /* SavedCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185502D128F1D2D000790D6D /* SavedCountriesViewController.swift */; };
 		185502D428F1F64100790D6D /* SavedCountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185502D328F1F64100790D6D /* SavedCountriesCollectionViewCell.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		18383D7328F4518F006C0F3D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		18383D7C28F4CF04006C0F3D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		18383D8028F593CC006C0F3D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		185502D128F1D2D000790D6D /* SavedCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCountriesViewController.swift; sourceTree = "<group>"; };
 		185502D328F1F64100790D6D /* SavedCountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCountriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		185502D628F1F9EC00790D6D /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				18FADC9028F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift */,
 				18FADC9628F182F9006FD0AB /* UIImageView+URL.swift */,
+				18383D8028F593CC006C0F3D /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				185502D228F1D2D000790D6D /* SavedCountriesViewController.swift in Sources */,
 				18383D7D28F4CF04006C0F3D /* UserDefaultsManager.swift in Sources */,
 				18D05FEA28F065AA00414E8B /* SceneDelegate.swift in Sources */,
+				18383D8128F593CC006C0F3D /* UIViewController+Alert.swift in Sources */,
 				18FADC9128F0D3A9006FD0AB /* UICollectionViewCell+Corners.swift in Sources */,
 				18FADC9328F0D955006FD0AB /* DetailCardViewController.swift in Sources */,
 			);
