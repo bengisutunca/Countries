@@ -2,7 +2,7 @@
 ## 🚀 About
 Countries App is an iOS App created by using GEODB Cities Api which users can see countries and add countries in their saved page. Also users are able to go to detail page of the country. I tried to follow MVC-N(Model-View-Controller-Networking) architecture. In Networking Layer, Generics and URLComponents saved the day for DRY principle! Also I used SVGKIT and Kingfisher libraries in this project. For Saved Page, I used UserDefaults. The app looks excellent in different devices like iPhone 8 to iPhone 13 Pro Max. Countries App was great experience for SVG Image Processings, button actions and UIKit usage. 
 
-## 🎯 Requirements and Technologies
+## 🎯 Requirements
 - Xcode 13.4
 - Swift 5
 - iOS 15.4 Deployment Target
