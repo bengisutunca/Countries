@@ -28,7 +28,7 @@ final class HomeViewController: UIViewController {
     }
     
     
-    private func getCountries(){
+    private func getCountries() {
         Networking().countryList(limit: GlobalVariables.limit, completion: { result in
             switch result {
             case .success(let country):

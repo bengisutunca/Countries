@@ -33,7 +33,7 @@ final class DetailCardViewController: UIViewController {
         controlFavButton()
     }
     
-    private func getCountryDetails(){
+    private func getCountryDetails() {
         Networking().countryDetails(code: countryCode ?? "", completion: { result in
             switch result {
             case .success(let countryDetail):

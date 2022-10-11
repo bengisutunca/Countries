@@ -14,7 +14,7 @@ final class TabBarViewController: UITabBarController {
         setupTabBar()
     }
     
-    private func setupTabBar(){
+    private func setupTabBar() {
         tabBar.items![0].title = GlobalVariables.tabBarItemName1
         tabBar.items![1].title = GlobalVariables.tabBarItemName2
     }

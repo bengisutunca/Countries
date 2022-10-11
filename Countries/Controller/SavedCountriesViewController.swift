@@ -24,7 +24,7 @@ final class SavedCountriesViewController: UIViewController {
         }
     }
     
-    private func updateArraysAndUI(){
+    private func updateArraysAndUI() {
         self.savedCountryNameList = GlobalVariables.savedCountriesNameList
         self.savedCountryCodeList = GlobalVariables.savedCountriesCodeList
         self.savedCountriesCollectionView.reloadData()
